@@ -2,17 +2,7 @@ import tweepy
 import os
 
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
-
-
-def oauth_login(consumer_key, consumer_secret):
-    """Authenticate with twitter using OAuth"""
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth_url = auth.get_authorization_url()
-    verify_code = input("Authenticate at %s and then enter you verification code here > " % auth_url)
-    auth.get_access_token(verify_code)
-    return tweepy.API(auth)
-
+from datetime import datetime
 
 load_dotenv(verbose=True)
 
