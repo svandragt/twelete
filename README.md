@@ -4,7 +4,7 @@ Delete your tweets older than 4 weeks. Tweets are temporary messages, and thus s
 
 ## Setup
 
-1. Install using poetry: `poetry install`
+1. Install using poetry: `poetry install`. (I created [PyShed](https://github.com/svandragt/pyshed) if you don't have poetry and python setup).
 2. Create a `.env` file with the following contents. Fill in the values after [creating a Twitter App](https://developer.twitter.com/en/apps):
 ```
 twelete_consumer_key=""
