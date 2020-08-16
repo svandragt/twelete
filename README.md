@@ -23,3 +23,11 @@ twelete_access_secret=""
 twelete_days_to_keep=28
 twelete_dry_run=0
 ```
+
+# Run periodically.
+
+Run `crontab -e` and add the following line:
+```
+# Run at 5:15am every day
+15 5 * * * pushd $HOME/src/twelete && $HOME/.poetry/bin/poetry run python ./twelete.py
+```
