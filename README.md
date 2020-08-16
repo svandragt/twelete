@@ -14,7 +14,7 @@ twelete_access_secret=""
 ```
 3. Run `poetry run python ./twelete.py`. It will dry-run, displaying deletable tweets over 28 days old.
 
-> Dry run, set twelete_dry_run to False<br>
+> Dry run. To delete: add "twelete_dry_run=0" to .env<br>
 > Authenticated as: svandragt<br>
 > Deleting 1284072013640982529: [2020-07-17 10:26:39] Just gave a sprint demo where I had Michael Jordan and Scotty Pippen joined the site as senior editor and author re… https://t.co/SvrEK99eum
 
