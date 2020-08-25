@@ -29,5 +29,11 @@ twelete_dry_run=0
 Run `crontab -e` and add the following line:
 ```
 # Run at 5:15am every day
-15 5 * * * pushd $HOME/src/twelete && $HOME/.poetry/bin/poetry run python ./twelete.py
+15 5 * * * cd $HOME/src/twelete && $HOME/.poetry/bin/poetry run python ./twelete.py >> /var/log/twelete.log 2>&1
+```
+
+Make sure the log file exists and is writable:
+```
+sudo touch /var/log/twelete.log
+sudo chown $(whoami):adm /var/log/twelete.log
 ```
